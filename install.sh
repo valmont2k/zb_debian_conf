@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-apt install zabbix-agent
+apt install zabbix-agent -y
 
 cp -fr ./etc/zabbix/* /etc/zabbix/
 
