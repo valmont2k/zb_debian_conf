@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt purge zabbix-agent -y
 
 apt install zabbix-agent -y
 
