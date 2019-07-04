@@ -21,3 +21,4 @@ sed -i 's/.*Hostname=Zabbix server.*/HostnameItem=system.hostname/' /etc/zabbix/
 
 
 /etc/init.d/zabbix-agent restart
+tail -f /var/log/zabbix-agent/zabbix_agentd.log 
