@@ -2,7 +2,8 @@
 
 apt purge zabbix-agent -y
 
-apt install zabbix-agent -y
+apt install zabbix-agent smartmontools -y
+sudo chmod u+s /usr/sbin/smartctl
 
 cp -fr ./scripts /etc/zabbix/
 cp -fr ./zabbix_agentd.conf.d /etc/zabbix/
