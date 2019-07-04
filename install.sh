@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt purge zabbix-agent -y
 
 apt install zabbix-agent -y
 
@@ -15,6 +16,7 @@ cat ./crontab/crontab >> crontabnew
 sed -i 's/.*Server=127.0.0.1.*/Server=zabbix.game-forest.com/' /etc/zabbix/zabbix_agentd.conf 
 sed -i 's/.*ServerActive=127.0.0.1.*/ServerActive=zabbix.game-forest.com/' /etc/zabbix/zabbix_agentd.conf 
 sed -i 's/.*Hostname=Zabbix server.*/HostnameItem=system.hostname/' /etc/zabbix/zabbix_agentd.conf 
+sed -i 's/.*EnableRemoteCommands=0.*/EnableRemoteCommands=1/' /etc/zabbix/zabbix_agentd.conf 
 
 
 #sed -i 's/.*ШАБЛОН.*/ЗАМЕНЯЮЩАЯ_СТРОКА/' ФАЙЛ
